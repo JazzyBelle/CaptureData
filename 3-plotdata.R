@@ -27,10 +27,10 @@ graph.small = as.data.frame(cbind(cave, n.capt=rep(1:9, times=nrow(smallcaves)),
 
 ggplot(data=graph.small, aes(x = n.capt, y = as.numeric(as.character(pctg)), group = cave)) +
   geom_line(aes(colour=cave))+
-  labs(x='Number of captures', y='Percentage')+
+  labs(x='Number of captures', y='Percentage', title = 'Percentage of fish with x captures' , subtitle='SMALL CAVES')+
   scale_y_continuous(limits=c(0,100))
-  
 
+ggsave('Percentage of fish with x captures in SMALL CAVES.jpg', height = 10, width = 10)
 
 # medium caves
 mediumcaves = detail_per_cave[which(detail_per_cave$n.fish > quantile(detail_per_cave$n.fish, c(0.33)) & detail_per_cave$n.fish < quantile(detail_per_cave$n.fish, c(0.66))),]
@@ -48,10 +48,10 @@ graph.medium = as.data.frame(cbind(cave, n.capt=rep(1:9, times=nrow(mediumcaves)
 
 ggplot(data=graph.medium, aes(x = n.capt, y = as.numeric(as.character(pctg)), group = cave)) +
   geom_line(aes(colour=cave))+
-  labs(x='Number of captures', y='Percentage')+
+  labs(x='Number of captures', y='Percentage', title = 'Percentage of fish with x captures' , subtitle='MEDIUM CAVES')+
   scale_y_continuous(limits=c(0,100))
 
-
+ggsave('Percentage of fish with x captures in MEDIUM CAVES.jpg', height = 10, width = 10)
 
 #large caves
 largecaves = detail_per_cave[which(detail_per_cave$n.fish > quantile(detail_per_cave$n.fish, c(0.66))),]
@@ -69,6 +69,7 @@ graph.large = as.data.frame(cbind(cave, n.capt=rep(1:9, times=nrow(largecaves)),
 
 ggplot(data=graph.large, aes(x = n.capt, y = as.numeric(as.character(pctg)), group = cave)) +
   geom_line(aes(colour=cave))+
-  labs(x='Number of captures', y='Percentage')+
+  labs(x='Number of captures', y='Percentage', title = 'Percentage of fish with x captures' , subtitle='LARGE CAVES')+
   scale_y_continuous(limits=c(0,100))
 
+ggsave('Percentage of fish with x captures in LARGE CAVES.jpg', height = 10, width = 10)
