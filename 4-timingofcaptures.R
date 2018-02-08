@@ -24,22 +24,33 @@ for (i in 1: (nrow(recapt_data)-1)){
 
 table(recapt_data$timingcapture)
 
-# 1    2    3    4    5    6    7    8 
-# 1619  660  204   90   39   11    9    2 
+# 1    2    3    4    5    6    7    8    9 
+# 1855  772  229  121   35   21    8    2    2 
 
-# 1619 back to back recaptures - representing 869 IDs
+# 1855 back to back recaptures - representing 962 IDs
 levels(droplevels(recapt_data[which(recapt_data$timingcapture == 1),3]))
-# 660 2-seasons long recaptures - representing 506 IDs
+length(levels(droplevels(recapt_data[which(recapt_data$timingcapture == 1),3])))
+# 772 2-seasons long recaptures - representing 587 IDs
 levels(droplevels(recapt_data[which(recapt_data$timingcapture == 2),3]))
-# 204 3-seasons long recaptures - representing 195 IDs
+length(levels(droplevels(recapt_data[which(recapt_data$timingcapture == 2),3])))
+# 229 3-seasons long recaptures - representing 195 IDs
 levels(droplevels(recapt_data[which(recapt_data$timingcapture == 3),3]))
-# 90 4-seasons long recaptures - representing 89 IDs
+length(levels(droplevels(recapt_data[which(recapt_data$timingcapture == 3),3])))
+# 121 4-seasons long recaptures - representing 89 IDs
 levels(droplevels(recapt_data[which(recapt_data$timingcapture == 4),3]))
-# 39 5-seasons long recaptures - representing 39 IDs
+length(levels(droplevels(recapt_data[which(recapt_data$timingcapture == 4),3])))
+# 35 5-seasons long recaptures - representing 34 IDs
 levels(droplevels(recapt_data[which(recapt_data$timingcapture == 5),3]))
-# 11 6-seasons long recaptures - representing 11 IDs
+length(levels(droplevels(recapt_data[which(recapt_data$timingcapture == 5),3])))
+# 21 6-seasons long recaptures - representing 11 IDs
 levels(droplevels(recapt_data[which(recapt_data$timingcapture == 6),3]))
-# 9 7-seasons long recaptures - representing 9 IDs
+length(levels(droplevels(recapt_data[which(recapt_data$timingcapture == 6),3])))
+# 8 7-seasons long recaptures - representing 8 IDs
 levels(droplevels(recapt_data[which(recapt_data$timingcapture == 7),3]))
+length(levels(droplevels(recapt_data[which(recapt_data$timingcapture == 7),3])))
 # 2 8-seasons long recaptures - representing 2 IDs
 levels(droplevels(recapt_data[which(recapt_data$timingcapture == 8),3]))
+length(levels(droplevels(recapt_data[which(recapt_data$timingcapture == 8),3])))
+# 2 9-seasons long recaptures - representing 2 IDs
+levels(droplevels(recapt_data[which(recapt_data$timingcapture == 9),3]))
+length(levels(droplevels(recapt_data[which(recapt_data$timingcapture == 9),3])))

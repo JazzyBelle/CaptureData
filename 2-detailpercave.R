@@ -13,7 +13,7 @@ capt_data = capt_data[!duplicated(capt_data[3:5]),]
 
 # HOW MANY INDIVIDUALS ARE BEING FOLLOWED TOTAL?
 
-length(levels(capt_data$ID)) # n=3298 different IDs overall
+length(levels(capt_data$ID)) # n=3371 different IDs overall
 
 ######################################################################################
 ######################################################################################
@@ -22,7 +22,7 @@ length(levels(capt_data$ID)) # n=3298 different IDs overall
 ######################################################################################
 
 # By summing the count for the subset in each cave, we obtain
-# n = 3401. It is more than the overall number of IDs (n=3298) because some fish moved between caves and 
+# n = 3401. It is more than the overall number of IDs (n=3298) because some fish moved between caves 
 
 ################################################################
 # HOW MANY HAVE BEEN CAPTURED 1, 2, 3, ... IN TOTAL? PER CAVE? #
@@ -81,4 +81,3 @@ for (i in 1:n.caves){
 
 write.table(detail_per_cave, 'detail_per_cave.txt', sep = '\t')
 
-# THINK OF A WAY TO COUNT FISH THAT HAVE POTENTIALLY LOST THEIR TAGS..
